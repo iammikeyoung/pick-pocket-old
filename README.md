@@ -62,20 +62,22 @@ func post(guess: String,
 
 You will need to use Intrepid's [Swift Wisdom](https://github.com/IntrepidPursuits/swift-wisdom) library in order to access the `Result` enum that is used in the `post` function.
 
-The base URL of the PickPocket API is:
+At this stage we're ready to start cracking remote locks! You'll want to set up Retrofit so that you can easily access the API we've created. The base URL of the PickPocket API is:
 
-https://g557v08nj5.execute-api.us-east-1.amazonaws.com/test
+https://g557v08nj5.execute-api.us-east-1.amazonaws.com/release
 
-The `post` function should send a POST request to the endpoint `/checkcombination` with the following body:
+The first thing you'll want to do is send a POST request to the endpoint /picklock/{victim} with the following body:
 
 ```json
 {
-    "userId": "Dad",
-    "guess": "232",
-    "userToPick" : "Paul"
+    "token": "2948785c-dabf-11e6-b80d-cadaf4a179ef",
+    "guess": "232"
 }
 ```
 
-We will provide you with a userId and a userToPick when you get to this step. I highly recommend testing out this web request in an app like [Postman](https://www.getpostman.com/) before adding it to your app.
+The `{victim}` in the URL is the user whose lock you are trying to crack. You can use the username `Paul` to test against the 'guess' 232.  The `token` in the JSON body is a unique
+identifier created by the server when a new user is added.  We will provide you with starter values for these items when you get to this step. You should probably test
+out this web request in an app like [Postman](https://www.getpostman.com/) before adding it to your app.
 
 **Important** - Once you introduce the ability to crack both local and remote locks you will have to update the original `Lock` and `PickPocketResult` [models](#create-models).
+
