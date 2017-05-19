@@ -64,7 +64,7 @@ You will need to use Intrepid's [Swift Wisdom](https://github.com/IntrepidPursui
 
 At this stage we're ready to start cracking remote locks! You'll want to set up Retrofit so that you can easily access the API we've created. The base URL of the PickPocket API is:
 
-https://g557v08nj5.execute-api.us-east-1.amazonaws.com/release
+https://5gbad1ceal.execute-api.us-east-1.amazonaws.com/release
 
 The first thing you'll want to do is send a POST request to the endpoint /picklock/{victim} with the following body:
 
