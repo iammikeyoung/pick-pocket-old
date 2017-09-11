@@ -1,5 +1,5 @@
 ![pick-pocket-ios](intrepid-logo.png)
-# PickPocket App - Winter 2017
+# PickPocket App - Fall 2017
 
 PickPocket is an app based on the game [Mastermind](ultimate-mastermind-rules.pdf). Players try to guess the correct combination of numbers to crack a lock. After each guess, players are given feedback on the number of digits in their guess that are correct or misplaced. The previous guesses a player made and and results of those guesses are also displayed. Players can either play against the computer, or try to crack the locks of other players.
 
@@ -9,7 +9,7 @@ PickPocket is an app based on the game [Mastermind](ultimate-mastermind-rules.pd
     - Navigate to the top-right corner of this page and click the Fork button.
     - All the work you'll do on this project will be done on your fork - no commits or pull requests should be made on the repo owned by `IntrepidPursuits`
 1. Clone your fork to your computer
-    - Navigate to your repo in Github. The repo name at the top of the page should be `<your-github-username> / pick-pocket-ios` and underneath it, it should say forked from `IntrepidPursuits / pick-pocket-ios`. 
+    - Navigate to your repo in Github. The repo name at the top of the page should be `<your-github-username> / pick-pocket-ios` and underneath it, it should say forked from `IntrepidPursuits / pick-pocket-ios`.
     - On the right side of the page, there is a green button that says "Clone or download". Click it and copy the link that appears
     - Open up Terminal and navigate to the directory you want your copy of the repo to be in. Run the following command:
         ```
@@ -17,12 +17,16 @@ PickPocket is an app based on the game [Mastermind](ultimate-mastermind-rules.pd
         ```
     The full command should look like: `git clone https://github.com/<your-github-username>/pick-pocket-ios.git`
 1. Open up the project in Xcode and build and run
-    
+
 ## Project Overview:
 
-You'll complete the project in incremental steps, putting up pull requests (PRs) to your own repo with every step (or possibly multiple PRs per step). Remember, this is not a race or competition. We would prefer you complete a few sections using proper architecture and coding style rather than rush through the project but end up with a tangled web of untestable code. This is a learning experience.
+You'll complete the project in incremental steps, putting up at least one pull request (PR) per step listed below. The PRs should be put up against your own repo, not against this one. If you're having difficulty with that, ask your mentor for help. They will be the one reviewing your PR. In PR reviews, they will provide feedback on how to make your code better and how to adhere to Intrepid's best practices and style guide. After making the suggested changes, you'll merge your PR and move onto the next step.
+
+Remember, this is not a race or competition. We would prefer you complete a few sections using proper architecture and coding style rather than rush through the project but end up with a tangled web of untestable code. This is a learning experience.
 
 ## Steps
+
+For each step below, you should put up a PR with the changes you made to implement it. PRs should not include more than one step, and multiple PRs can be made for one step if there are a lot of changes.
 
 1. [Create Models](#1-create-models) - Create models that encapsulate the game logic.
 1. [Create UI](#2-create-ui) - Create a UI that allows you to play a one-way Mastermind game against a computer opponent.
@@ -65,7 +69,7 @@ This is a perfect opportunity to use Model-View-ViewModel ([MVVM](https://www.ob
 
 ### 3. Previous Guesses
 
-Expand your ViewModel or create a different one to display your past attempts. See #5 in the wireframe.
+Expand your view model or create a different one to display your past attempts. See #5 in the wireframe.
 
 ### 4. Networking
 
@@ -103,3 +107,6 @@ out this web request in an app like [Postman](https://www.getpostman.com/) befor
 
 Note: The above libraries should be added in using Cocoapods.
 
+## Next Steps
+
+If you finish the steps given above, go talk to the person running the project or to your mentor about next steps.
