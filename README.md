@@ -71,7 +71,7 @@ The first thing you'll want to do is send a POST request to the endpoint /picklo
 ```json
 {
     "token": "1e32c098-93cf-11e7-8bf1-e29045b92989",
-    "guess": "232"
+    "guess": "[2,3,2]"
 }
 ```
 
