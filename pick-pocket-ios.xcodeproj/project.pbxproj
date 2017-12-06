@@ -8,14 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		49873D0F1E2174E80031B91A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49873D0E1E2174E80031B91A /* AppDelegate.swift */; };
-		49873D141E2174E80031B91A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49873D121E2174E80031B91A /* Main.storyboard */; };
 		49873D161E2174E80031B91A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49873D151E2174E80031B91A /* Assets.xcassets */; };
 		49873D191E2174E80031B91A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49873D171E2174E80031B91A /* LaunchScreen.storyboard */; };
 		49873D2F1E2174E80031B91A /* pick_pocket_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49873D2E1E2174E80031B91A /* pick_pocket_iosUITests.swift */; };
 		49873D401E2175CA0031B91A /* Lock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49873D3F1E2175CA0031B91A /* Lock.swift */; };
 		49873D421E2175FD0031B91A /* PickPocketResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49873D411E2175FD0031B91A /* PickPocketResult.swift */; };
 		49873D441E2176C50031B91A /* LockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49873D431E2176C50031B91A /* LockTests.swift */; };
-		49873D471E2178960031B91A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49873D461E2178960031B91A /* ViewController.swift */; };
+		49873D471E2178960031B91A /* PickLockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49873D461E2178960031B91A /* PickLockViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +37,6 @@
 /* Begin PBXFileReference section */
 		49873D0B1E2174E80031B91A /* pick-pocket-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pick-pocket-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49873D0E1E2174E80031B91A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		49873D131E2174E80031B91A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49873D151E2174E80031B91A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49873D181E2174E80031B91A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49873D1A1E2174E80031B91A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,7 +48,7 @@
 		49873D3F1E2175CA0031B91A /* Lock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lock.swift; sourceTree = "<group>"; };
 		49873D411E2175FD0031B91A /* PickPocketResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickPocketResult.swift; sourceTree = "<group>"; };
 		49873D431E2176C50031B91A /* LockTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockTests.swift; sourceTree = "<group>"; };
-		49873D461E2178960031B91A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		49873D461E2178960031B91A /* PickLockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickLockViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,9 +103,8 @@
 				49873D0E1E2174E80031B91A /* AppDelegate.swift */,
 				49873D1A1E2174E80031B91A /* Info.plist */,
 				49873D171E2174E80031B91A /* LaunchScreen.storyboard */,
-				49873D121E2174E80031B91A /* Main.storyboard */,
 				49873D3E1E2175CA0031B91A /* Models */,
-				49873D451E2178960031B91A /* ViewControllers */,
+				49873D451E2178960031B91A /* Pick Lock */,
 			);
 			path = "pick-pocket-ios";
 			sourceTree = "<group>";
@@ -139,12 +136,12 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		49873D451E2178960031B91A /* ViewControllers */ = {
+		49873D451E2178960031B91A /* Pick Lock */ = {
 			isa = PBXGroup;
 			children = (
-				49873D461E2178960031B91A /* ViewController.swift */,
+				49873D461E2178960031B91A /* PickLockViewController.swift */,
 			);
-			path = ViewControllers;
+			path = "Pick Lock";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +256,6 @@
 			files = (
 				49873D191E2174E80031B91A /* LaunchScreen.storyboard in Resources */,
 				49873D161E2174E80031B91A /* Assets.xcassets in Resources */,
-				49873D141E2174E80031B91A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +282,7 @@
 			files = (
 				49873D421E2175FD0031B91A /* PickPocketResult.swift in Sources */,
 				49873D401E2175CA0031B91A /* Lock.swift in Sources */,
-				49873D471E2178960031B91A /* ViewController.swift in Sources */,
+				49873D471E2178960031B91A /* PickLockViewController.swift in Sources */,
 				49873D0F1E2174E80031B91A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,14 +319,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		49873D121E2174E80031B91A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				49873D131E2174E80031B91A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		49873D171E2174E80031B91A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
