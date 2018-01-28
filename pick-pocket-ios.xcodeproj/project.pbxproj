@@ -15,6 +15,10 @@
 		49873D421E2175FD0031B91A /* PickPocketResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49873D411E2175FD0031B91A /* PickPocketResult.swift */; };
 		49873D441E2176C50031B91A /* LockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49873D431E2176C50031B91A /* LockTests.swift */; };
 		49873D471E2178960031B91A /* PickLockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49873D461E2178960031B91A /* PickLockViewController.swift */; };
+		A49C86D7201D5AA500D29329 /* PickLockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A49C86D6201D5AA500D29329 /* PickLockViewController.xib */; };
+		A49C86D9201D637C00D29329 /* GuessDigitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49C86D8201D637C00D29329 /* GuessDigitButton.swift */; };
+		A49C86DC201D650F00D29329 /* PickLockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49C86DB201D650F00D29329 /* PickLockViewModel.swift */; };
+		A49C86E2201D75AC00D29329 /* CustomizableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49C86E1201D75AC00D29329 /* CustomizableLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		49873D411E2175FD0031B91A /* PickPocketResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickPocketResult.swift; sourceTree = "<group>"; };
 		49873D431E2176C50031B91A /* LockTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockTests.swift; sourceTree = "<group>"; };
 		49873D461E2178960031B91A /* PickLockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickLockViewController.swift; sourceTree = "<group>"; };
+		A49C86D6201D5AA500D29329 /* PickLockViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickLockViewController.xib; sourceTree = "<group>"; };
+		A49C86D8201D637C00D29329 /* GuessDigitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessDigitButton.swift; sourceTree = "<group>"; };
+		A49C86DB201D650F00D29329 /* PickLockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickLockViewModel.swift; sourceTree = "<group>"; };
+		A49C86E1201D75AC00D29329 /* CustomizableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizableLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +107,14 @@
 		49873D0D1E2174E80031B91A /* pick-pocket-ios */ = {
 			isa = PBXGroup;
 			children = (
+				A49C86E0201D759700D29329 /* View */,
 				49873D151E2174E80031B91A /* Assets.xcassets */,
 				49873D0E1E2174E80031B91A /* AppDelegate.swift */,
 				49873D1A1E2174E80031B91A /* Info.plist */,
 				49873D171E2174E80031B91A /* LaunchScreen.storyboard */,
 				49873D3E1E2175CA0031B91A /* Models */,
 				49873D451E2178960031B91A /* Pick Lock */,
+				A49C86DD201D74C600D29329 /* Extensions */,
 			);
 			path = "pick-pocket-ios";
 			sourceTree = "<group>";
@@ -139,9 +149,35 @@
 		49873D451E2178960031B91A /* Pick Lock */ = {
 			isa = PBXGroup;
 			children = (
+				A49C86DB201D650F00D29329 /* PickLockViewModel.swift */,
 				49873D461E2178960031B91A /* PickLockViewController.swift */,
+				A49C86D6201D5AA500D29329 /* PickLockViewController.xib */,
+				A49C86DA201D638100D29329 /* View */,
 			);
 			path = "Pick Lock";
+			sourceTree = "<group>";
+		};
+		A49C86DA201D638100D29329 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A49C86D8201D637C00D29329 /* GuessDigitButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A49C86DD201D74C600D29329 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A49C86E0201D759700D29329 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A49C86E1201D75AC00D29329 /* CustomizableLabel.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A49C86D7201D5AA500D29329 /* PickLockViewController.xib in Resources */,
 				49873D191E2174E80031B91A /* LaunchScreen.storyboard in Resources */,
 				49873D161E2174E80031B91A /* Assets.xcassets in Resources */,
 			);
@@ -281,8 +318,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				49873D421E2175FD0031B91A /* PickPocketResult.swift in Sources */,
+				A49C86E2201D75AC00D29329 /* CustomizableLabel.swift in Sources */,
+				A49C86D9201D637C00D29329 /* GuessDigitButton.swift in Sources */,
 				49873D401E2175CA0031B91A /* Lock.swift in Sources */,
 				49873D471E2178960031B91A /* PickLockViewController.swift in Sources */,
+				A49C86DC201D650F00D29329 /* PickLockViewModel.swift in Sources */,
 				49873D0F1E2174E80031B91A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

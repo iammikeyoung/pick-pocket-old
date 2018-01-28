@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PickLockViewController" customModule="pick_pocket_ios" customModuleProvider="target">
+            <connections>
+                <outlet property="feedbackLabel" destination="B8d-qX-q5t" id="1SJ-Jf-obt"/>
+                <outlet property="guessLabel" destination="Ye5-qh-LS9" id="bxn-be-9Gz"/>
+                <outlet property="lockImageView" destination="7oB-mW-xNc" id="mZo-9M-gfS"/>
+                <outlet property="previousGuessLabel" destination="LGn-aG-tfl" id="GGu-JP-dLW"/>
+                <outlet property="view" destination="iN0-l3-epB" id="0Zy-hk-ytC"/>
+                <outletCollection property="digitButtons" destination="6Pa-vt-ByK" collectionClass="NSMutableArray" id="kSV-Ab-Fl6"/>
+                <outletCollection property="digitButtons" destination="YYy-30-SjU" collectionClass="NSMutableArray" id="3PY-Zn-czb"/>
+                <outletCollection property="digitButtons" destination="VPw-6h-CgC" collectionClass="NSMutableArray" id="R2n-Yh-Jf9"/>
+                <outletCollection property="digitButtons" destination="vcp-L6-xkx" collectionClass="NSMutableArray" id="74A-vv-dkc"/>
+                <outletCollection property="digitButtons" destination="tiC-gB-cDe" collectionClass="NSMutableArray" id="fPR-8Z-94I"/>
+                <outletCollection property="digitButtons" destination="ms5-5f-xBP" collectionClass="NSMutableArray" id="PH5-MQ-vj5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="19h-9h-HaV">
+                    <rect key="frame" x="20" y="412" width="335" height="61.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ye5-qh-LS9" customClass="CustomizableLabel" customModule="pick_pocket_ios" customModuleProvider="target">
+                            <rect key="frame" x="137" y="20" width="60" height="20.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="f8c-Cs-Oyc"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="letterSpacing">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock-closed" translatesAutoresizingMaskIntoConstraints="NO" id="7oB-mW-xNc">
+                            <rect key="frame" x="10" y="5.5" width="46.5" height="46.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="7oB-mW-xNc" secondAttribute="height" id="tCe-UE-qIY"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.89642333984375" green="0.9712708592414856" blue="0.95668095350265503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="7oB-mW-xNc" firstAttribute="leading" secondItem="19h-9h-HaV" secondAttribute="leading" constant="10" id="BoF-3R-D1x"/>
+                        <constraint firstItem="Ye5-qh-LS9" firstAttribute="centerY" secondItem="19h-9h-HaV" secondAttribute="centerY" id="MO9-Cu-gCi"/>
+                        <constraint firstItem="7oB-mW-xNc" firstAttribute="height" secondItem="19h-9h-HaV" secondAttribute="height" multiplier="0.75" id="TyP-JW-uoO"/>
+                        <constraint firstItem="Ye5-qh-LS9" firstAttribute="centerX" secondItem="19h-9h-HaV" secondAttribute="centerX" id="fAT-ho-8gt"/>
+                        <constraint firstItem="7oB-mW-xNc" firstAttribute="centerY" secondItem="19h-9h-HaV" secondAttribute="centerY" constant="-2" id="ik2-SP-BOk"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2p2-nN-uyc">
+                    <rect key="frame" x="20" y="503.5" width="335" height="143.5"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yI3-mY-Jpn">
+                            <rect key="frame" x="0.0" y="0.0" width="335" height="62"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Pa-vt-ByK" userLabel="GuessDigitButton" customClass="GuessDigitButton" customModule="pick_pocket_ios" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="98.5" height="62"/>
+                                    <color key="backgroundColor" red="0.72757083177566528" green="0.93619668483734131" blue="0.88899767398834229" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="1"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="digit">
+                                            <integer key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="guessDigitButtonPressed:" destination="-1" eventType="touchUpInside" id="pEE-96-woe"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYy-30-SjU" userLabel="GuessDigitButton" customClass="GuessDigitButton" customModule="pick_pocket_ios" customModuleProvider="target">
+                                    <rect key="frame" x="118.5" y="0.0" width="98" height="62"/>
+                                    <color key="backgroundColor" red="0.72757083177566528" green="0.93619668483734131" blue="0.88899767398834229" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="2"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="digit">
+                                            <integer key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="guessDigitButtonPressed:" destination="-1" eventType="touchUpInside" id="VLF-52-GR0"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPw-6h-CgC" userLabel="GuessDigitButton" customClass="GuessDigitButton" customModule="pick_pocket_ios" customModuleProvider="target">
+                                    <rect key="frame" x="236.5" y="0.0" width="98.5" height="62"/>
+                                    <color key="backgroundColor" red="0.72757083177566528" green="0.93619668483734131" blue="0.88899767398834229" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="3"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="digit">
+                                            <integer key="value" value="3"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="guessDigitButtonPressed:" destination="-1" eventType="touchUpInside" id="UbC-Ro-gDe"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="QTf-mr-3XY">
+                            <rect key="frame" x="0.0" y="82" width="335" height="61.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcp-L6-xkx" userLabel="GuessDigitButton" customClass="GuessDigitButton" customModule="pick_pocket_ios" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="98.5" height="61.5"/>
+                                    <color key="backgroundColor" red="0.72757083177566528" green="0.93619668483734131" blue="0.88899767398834229" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="4"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="digit">
+                                            <integer key="value" value="4"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="guessDigitButtonPressed:" destination="-1" eventType="touchUpInside" id="7Ju-MT-Hso"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tiC-gB-cDe" userLabel="GuessDigitButton" customClass="GuessDigitButton" customModule="pick_pocket_ios" customModuleProvider="target">
+                                    <rect key="frame" x="118.5" y="0.0" width="98" height="61.5"/>
+                                    <color key="backgroundColor" red="0.72757083177566528" green="0.93619668483734131" blue="0.88899767398834229" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="5"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="digit">
+                                            <integer key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="guessDigitButtonPressed:" destination="-1" eventType="touchUpInside" id="OTd-FC-OED"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ms5-5f-xBP" userLabel="GuessDigitButton" customClass="GuessDigitButton" customModule="pick_pocket_ios" customModuleProvider="target">
+                                    <rect key="frame" x="236.5" y="0.0" width="98.5" height="61.5"/>
+                                    <color key="backgroundColor" red="0.72757083177566528" green="0.93619668483734131" blue="0.88899767398834229" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="6"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="digit">
+                                            <integer key="value" value="6"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="guessDigitButtonPressed:" destination="-1" eventType="touchUpInside" id="gvU-k3-hEa"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8d-qX-q5t">
+                    <rect key="frame" x="20" y="382" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGn-aG-tfl">
+                    <rect key="frame" x="355" y="382" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="19h-9h-HaV" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="centerY" multiplier="1.2" id="117-3t-U8v"/>
+                <constraint firstItem="19h-9h-HaV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="1JJ-co-oF2"/>
+                <constraint firstItem="19h-9h-HaV" firstAttribute="height" secondItem="6Pa-vt-ByK" secondAttribute="height" id="4HQ-vU-2oY"/>
+                <constraint firstItem="19h-9h-HaV" firstAttribute="top" secondItem="LGn-aG-tfl" secondAttribute="bottom" constant="30" id="64z-XU-SOy"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="2p2-nN-uyc" secondAttribute="bottom" constant="20" id="Gd4-X5-IBP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="2p2-nN-uyc" secondAttribute="trailing" constant="20" id="Izy-Wo-eZt"/>
+                <constraint firstItem="B8d-qX-q5t" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="KIS-Bi-hr2"/>
+                <constraint firstItem="2p2-nN-uyc" firstAttribute="top" secondItem="19h-9h-HaV" secondAttribute="bottom" constant="30" id="MRu-oh-IDi"/>
+                <constraint firstItem="2p2-nN-uyc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="dds-DF-UR7"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="19h-9h-HaV" secondAttribute="trailing" constant="20" id="dpd-dN-jso"/>
+                <constraint firstItem="B8d-qX-q5t" firstAttribute="bottom" secondItem="LGn-aG-tfl" secondAttribute="bottom" id="jgy-gV-2NI"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="LGn-aG-tfl" secondAttribute="trailing" constant="20" id="ywt-lf-H2E"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="lock-closed" width="2820" height="4088"/>
+    </resources>
+</document>
